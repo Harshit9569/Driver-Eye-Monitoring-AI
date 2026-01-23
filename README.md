@@ -39,21 +39,22 @@ This project is developed mainly for learning and academic purposes.
 
 ## Project Structure
 
-Driver-Eye-Monitoring-AI/
+Driver-Eye-Monitoring-AI
 │
-├── backend/
-│   ├── app.py              # FastAPI backend application
-│   └── model.h5            # Trained CNN model
+├── backend
+│   ├── app.py
+│   └── model.h5
 │
-├── frontend/
-│   └── frontend.py         # Streamlit frontend for live eye monitoring
+├── frontend
+│   └── frontend.py
 │
-├── model/
-│   └── modelnotebook.ipynb # Model training notebook
+├── model
+│   └── modelnotebook.ipynb
 │
-├── requirements.txt        # Project dependencies
+├── requirements.txt
 ├── .gitignore
 └── README.md
+
 
 ---
 
