@@ -1,93 +1,150 @@
-# Driver-Eye-Monitoring-AI
-eye monitoring project
+# 👁️ Driver-Eye-Monitoring-AI
 
+> **Real-Time Driver Eye Monitoring System**  
+> Detect driver drowsiness and inattention using deep learning and computer vision
 
-# 👁️ Driver Eye Monitoring AI
+---
 
-This project is an AI-powered real-time driver eye monitoring system that detects driver drowsiness or inattention using a Convolutional Neural Network (CNN).  
-The system captures live webcam video, analyzes the eye state (open or closed), and shows real-time predictions.
+## Overview
 
-The project uses TensorFlow for deep learning, OpenCV for image processing, FastAPI for backend model serving, and Streamlit for frontend visualization.  
-This project is developed mainly for learning and academic purposes.
+**Driver-Eye-Monitoring-AI** is an AI-powered real-time system that monitors a driver’s eye state to detect **drowsiness or inattention**.
+
+The application captures live webcam video, processes eye images using **OpenCV**, and classifies the eye state (**Open / Closed**) using a **Convolutional Neural Network (CNN)**.  
+A **FastAPI backend** serves the model, while a **Streamlit frontend** provides a live interactive interface.
+
+This project is designed for **learning, academic projects, and portfolio demonstration**.
 
 ---
 
 ## Features
 
-- Eye state detection (Open / Closed) using a trained CNN model  
-- Real-time webcam video capture and processing using OpenCV  
-- FastAPI backend to load and serve the trained model  
-- Streamlit frontend for live eye monitoring  
-- Simple and beginner-friendly project structure  
+- Real-time eye state detection (Open / Closed)
+- Live webcam feed using OpenCV
+- CNN-based deep learning model (`model.h5`)
+- FastAPI backend for inference
+- Streamlit frontend for visualization
+- Simple and beginner-friendly project structure
 
 ---
 
 ## Tech Stack
 
-| Tool              | Purpose                                      |
-|-------------------|----------------------------------------------|
-| TensorFlow        | Loading and running the CNN model (`model.h5`) |
-| FastAPI           | Backend API server                           |
-| Streamlit         | Frontend interface                           |
-| OpenCV            | Webcam video stream capture                  |
-| Pillow            | Image pre-processing                         |
-| Uvicorn           | ASGI server to run FastAPI                   |
-| Requests          | Communication between frontend & backend     |
-| python-multipart  | File upload and form support in FastAPI      |
+| Component | Tools |
+|---------|-------|
+| Deep Learning | TensorFlow / Keras |
+| Backend | FastAPI, Uvicorn |
+| Frontend | Streamlit |
+| Computer Vision | OpenCV |
+| Image Processing | Pillow |
+
+---
+
+## Processing Pipeline
+
+    Webcam Feed
+        ↓
+    Frame Capture (OpenCV)
+        ↓
+    Image Preprocessing
+        ↓
+    CNN Model Prediction
+        ↓
+    Eye State (Open / Closed)
+        ↓
+    Live Display (Streamlit)
 
 ---
 
 ## 📁 Project Structure
 
-    
     Driver-Eye-Monitoring-AI
     │
     ├── backend
-    │   ├── app.py
-    │   └── model.h5
+    │   ├── app.py                 # FastAPI backend
+    │   └── model.h5               # Trained CNN model
     │
     ├── frontend
-    │   └── frontend.py
+    │   └── frontend.py            # Streamlit frontend
     │
     ├── model
-    │   └── modelnotebook.ipynb
+    │   └── modelnotebook.ipynb    # Model training notebook
     │
     ├── requirements.txt
     ├── .gitignore
     └── README.md
 
+---
 
+## Installation
+
+### Prerequisites
+
+- Python 3.9+
+- Webcam
+- pip
 
 ---
 
-## Running code
+## Local Setup
 
-### open terminal and clone the repo first
+### 1. Clone Repository
 
-git clone https://github.com/ravikumar266/Driver-Eye-Monitoring-AI.git  
-cd Driver-Eye-Monitoring-AI  
-
-python -m venv venv  
-
-venv\Scripts\activate  # Windows  
-source venv/bin/activate  # macOS/Linux  
-
-pip install -r requirements.txt  
+    git clone https://github.com/ravikumar266/Driver-Eye-Monitoring-AI.git
+    cd Driver-Eye-Monitoring-AI
 
 ---
 
-cd backend  
-uvicorn app:app --reload  
+### 2. Create Virtual Environment
+
+    python -m venv venv
+
+**Windows**
+
+    venv\Scripts\activate
+
+**macOS / Linux**
+
+    source venv/bin/activate
 
 ---
 
-### open new terminal but do not close old terminal of fastapi
+### 3. Install Dependencies
 
-cd Driver-Eye-Monitoring-AI  # if required  
-cd frontend  
-
-streamlit run frontend.py  
+    pip install -r requirements.txt
 
 ---
 
-### you can see an option to open camera. after clicking it, you can see live eye monitoring predictions
+## Running the Application
+
+### Start Backend (FastAPI)
+
+    cd backend
+    uvicorn app:app --reload
+
+Keep this terminal running.
+
+---
+
+### Start Frontend (Streamlit)
+
+Open a new terminal:
+
+    cd Driver-Eye-Monitoring-AI
+    cd frontend
+    streamlit run frontend.py
+
+---
+
+## Usage
+
+1. Open the Streamlit app in your browser  
+2. Click **Open Camera**  
+3. Allow webcam access  
+4. View live eye state predictions  
+
+---
+
+## Author
+
+**Harshit**  
+GitHub: https://github.com/Harshit9569/Driver-Eye-Monitoring-AI
