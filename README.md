@@ -37,23 +37,25 @@ This project is developed mainly for learning and academic purposes.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-Driver-Eye-Monitoring-AI
-│
-├── backend
-│   ├── app.py
-│   └── model.h5
-│
-├── frontend
-│   └── frontend.py
-│
-├── model
-│   └── modelnotebook.ipynb
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
+    
+    Driver-Eye-Monitoring-AI
+    │
+    ├── backend
+    │   ├── app.py
+    │   └── model.h5
+    │
+    ├── frontend
+    │   └── frontend.py
+    │
+    ├── model
+    │   └── modelnotebook.ipynb
+    │
+    ├── requirements.txt
+    ├── .gitignore
+    └── README.md
+
 
 
 ---
